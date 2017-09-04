@@ -1,0 +1,19 @@
+.root {
+    -fx-padding: 10px;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+#grid-header {
+    -fx-background-color: cornflowerblue;
+    -fx-text-alignment: left;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+    -fx-font-size: 24px;
+}
