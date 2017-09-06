@@ -2,18 +2,55 @@
     -fx-padding: 10px;
     -fx-hgap: 10px;
     -fx-vgap: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #333333;
 }
 
 .label {
-    -fx-font-size: 16px;
+    -fx-font-size: 12px;
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#welcome-text {
+    -fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#actionTarget {
+    -fx-fill: FIREBRICK;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
 #grid-header {
-    -fx-background-color: cornflowerblue;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-text-alignment: left;
     -fx-font-weight: bold;
-    -fx-fill: white;
+    -fx-text-fill: white;
     -fx-font-size: 24px;
+    -fx-padding: 0px 0px 0px 10px;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+#helpBtn {
+    -fx-alignment: bottom-right;
+}
+
+#cancelBtn {
+    -fx-alignment: bottom-right;
 }
