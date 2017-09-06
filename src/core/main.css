@@ -26,6 +26,12 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
+#actionTargetBtn {
+    -fx-fill: FIREBRICK;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
 #grid-header {
     -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-text-alignment: left;

@@ -15,36 +15,36 @@ public class MainController {
      * create Timesheet in DB
      */
     @FXML
-    protected void handleSaveBtnAction(ActionEvent event) {
+    protected void handleSaveBtnAction() {
         System.out.println("Save Button Clicked");
+        actionTargetBtn.setText("Saving ...");
     }
 
     /*
      * change to Project list view
      */
     @FXML
-    protected void handleProjectBtnAction(ActionEvent event) {
+    protected void handleProjectBtnAction() {
         System.out.println("Project Button Clicked");
+        actionTargetBtn.setText("Projekt ...");
     }
 
     /*
      * open addition Window for Help
      */
     @FXML
-    protected void handleHelpBtnAction(ActionEvent event) {
+    protected void handleHelpBtnAction() {
         System.out.println("Help Button Clicked");
+        actionTargetBtn.setText("Help ...");
     }
 
     /*
-     * disconnect Database
-     * close every sub window
-     * close application
+     * disconnecting database
+     *
      */
     @FXML
-    protected void handleCancelBtnAction (ActionEvent event) {
+    protected void handleCancelBtnAction () {
         System.out.println("Cancel Button Clicked");
         actionTargetBtn.setText("Closing ...");
-        Platform.exit();
-        System.exit(0);
     }
 }
