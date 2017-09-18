@@ -47,11 +47,7 @@ public class MainController {
         boolean mCost = moreCost.isSelected();
 
         if (datum != null) {
-            actionTargetBtn.setText("Saving ... \n" +
-                    emName + "\n " + datum.toString());
-            DataSource ds = new DataSource();
-            ds.connectToDB();
-            ds.login("Munkhbold", "Start#123");
+            actionTargetBtn.setText("Saving ... \n");
         } else {
             actionTargetBtn.setText("Bitte wählen Sie einen Datum aus!");
         }
@@ -61,9 +57,15 @@ public class MainController {
      * change to Project list view
      */
     @FXML
-    protected void handleProjectBtnAction() {
-        System.out.println("Project Button Clicked");
-        actionTargetBtn.setText("Projekt ...");
+    private Button projectBtn;
+    @FXML
+    protected void handleProjectBtnAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage)projectBtn.getScene().getWindow();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("../view/projectView.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     /*
@@ -83,7 +85,6 @@ public class MainController {
 
     /*
      * disconnecting database
-     *
      */
     @FXML
     private Button cancelBtn;

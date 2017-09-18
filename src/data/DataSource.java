@@ -6,24 +6,18 @@ import java.sql.*;
 import java.util.*;
 
 public class DataSource {
+    String dbURL = "jdbc:mysql://localhost:3306/javafx";
+    String username = "root";
+    String password = "Start#123";
 
     /*
      * Connection to database
      * CRUD Operationen
      */
-
-    String dbURL = "jdbc:mysql://localhost:3306/javafx";
-    String username = "root";
-    String password = "Start#123";
-
-    public void connectToDB() {
-        try (Connection conn = DriverManager.getConnection(dbURL, username, password)){
-            System.out.println("Connected!");
-        } catch (SQLException ex) {
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
-        }
+    public void createTimesheet() {
+        String sql =
+                "INSERT INTO timesheet (Name, Date, Project, Contract, Customer, Assignment, Businessclass, Jobtype, Duration, Calculation, Extra, Comments)" +
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
     }
 
 

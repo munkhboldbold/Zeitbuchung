@@ -51,7 +51,7 @@
   <!-- 9. Row-->
   <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="8">
     <Button onAction="#handleSaveBtnAction" text="Abschließen" />
-    <Button onAction="#handleProjectBtnAction" text="gehe zu Projekt" />
+    <Button fx:id="projectBtn" onAction="#handleProjectBtnAction" text="gehe zu Projekt" />
     <Button fx:id="helpBtn" alignment="BOTTOM_RIGHT" onAction="#handleHelpBtnAction" text="Hilfe" />
     <Button fx:id="cancelBtn" alignment="BOTTOM_RIGHT" onAction="#handleCancelBtnAction" text="Abbrechen" />
   </HBox>
