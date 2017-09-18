@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import java.net.*?>
-<?import java.net.URL?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.text.Text?>
 
-<GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MainController">
+<GridPane alignment="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" styleClass="root" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MainController">
   <!--
     <fx:script>
     </fx:script>
-    <fx:script source="fxml_example.js" />
+    <fx:script source="../script/script.js" />
     -->
   <!-- 1. Row-->
   <Label id="grid-header" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Zeit" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0" />
@@ -59,19 +52,12 @@
   <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="8">
     <Button onAction="#handleSaveBtnAction" text="Abschließen" />
     <Button onAction="#handleProjectBtnAction" text="gehe zu Projekt" />
-    <Button alignment="BOTTOM_RIGHT" onAction="#handleHelpBtnAction" text="Hilfe" />
-    <Button alignment="BOTTOM_RIGHT" onAction="#handleCancelBtnAction" text="Abbrechen" />
+    <Button fx:id="helpBtn" alignment="BOTTOM_RIGHT" onAction="#handleHelpBtnAction" text="Hilfe" />
+    <Button fx:id="cancelBtn" alignment="BOTTOM_RIGHT" onAction="#handleCancelBtnAction" text="Abbrechen" />
   </HBox>
   <!-- 10. Row-->
   <Text fx:id="actionTargetBtn" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="9" />
-  <!-- <Button text="Abschließen" onAction=""/> -->
-  <!-- Styling -->
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-  </columnConstraints>
+
   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="159.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
     <children>
       <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="21.0" prefWidth="133.0" spacing="10.0">
@@ -90,17 +76,10 @@
   <TextField fx:id="empName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
   <TextField fx:id="contractName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
   <DatePicker fx:id="datepicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-  </rowConstraints>
+
+  <!-- Styling -->
   <stylesheets>
-    <URL value="@main.css" />
+    <URL value="@../style/main.css" />
   </stylesheets>
   <TextField fx:id="customerName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
   <TextField fx:id="orderName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />

@@ -1,18 +1,16 @@
 package controller;
 
 import data.DataSource;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Timesheet;
+import javafx.event.ActionEvent;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -53,6 +51,7 @@ public class MainController {
                     emName + "\n " + datum.toString());
             DataSource ds = new DataSource();
             ds.connectToDB();
+            ds.login("Munkhbold", "Start#123");
         } else {
             actionTargetBtn.setText("Bitte wählen Sie einen Datum aus!");
         }
@@ -71,9 +70,15 @@ public class MainController {
      * open addition Window for Help
      */
     @FXML
-    protected void handleHelpBtnAction(javafx.event.ActionEvent event) {
-        System.out.println("Help Button Clicked");
-        actionTargetBtn.setText("Help ...");
+    private Button helpBtn;
+    @FXML
+    protected void handleHelpBtnAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage)helpBtn.getScene().getWindow();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("../view/help.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     /*
@@ -81,8 +86,15 @@ public class MainController {
      *
      */
     @FXML
-    protected void handleCancelBtnAction () {
-        System.out.println("Cancel Button Clicked");
-        actionTargetBtn.setText("Closing ...");
+    private Button cancelBtn;
+
+    @FXML
+    protected void handleCancelBtnAction (ActionEvent event) throws IOException {
+        Stage stage = (Stage)cancelBtn.getScene().getWindow();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("../view/login.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

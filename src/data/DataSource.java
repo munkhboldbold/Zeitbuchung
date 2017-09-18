@@ -2,9 +2,7 @@ package data;
 
 import model.Timesheet;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
 
 public class DataSource {
@@ -29,4 +27,27 @@ public class DataSource {
     }
 
 
+    /*
+     * Login function
+     */
+    public boolean login(String usern, String pwd) {
+        boolean correct = false;
+        String sql = "Select username, password from user";
+        try (Connection conn = DriverManager.getConnection(dbURL, username, password)){
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            while(result.next()) {
+                if(result.getString(1).equals(usern) &&
+                        result.getString(2).equals(pwd)) {
+                    correct = true;
+                }
+            }
+
+        } catch (SQLException ex) {
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return correct;
+    }
 }

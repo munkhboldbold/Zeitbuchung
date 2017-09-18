@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" styleClass="root"
+          vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+          fx:controller="controller.LoginController">
+  <Text id="welcome-text" text="Willkommen" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+  <Label maxWidth="1.7976931348623157E308" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  <TextField fx:id="username" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <PasswordField fx:id="password" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+  <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+    <Button onAction="#handleSubmitButtonAction" text="Anmelden" />
+  </HBox>
+  <Text fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+  <stylesheets>
+    <URL value="@../style/main.css" />
+  </stylesheets>
+</GridPane>
