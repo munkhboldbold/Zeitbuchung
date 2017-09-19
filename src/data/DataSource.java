@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataSource {
-    String dbURL = "jdbc:mysql://localhost:3306/javafx";
-    String username = "root";
-    String password = "Start#123";
+    private String dbURL = "jdbc:mysql://localhost:3306/javafx";
+    private String username = "root";
+    private String password = "Start#123";
 
     /*
      * Connection to database
@@ -47,6 +47,7 @@ public class DataSource {
     }
 
     // READ
+    /*
     public void getAllTimesheets() {
         String sql = "SELECT * from timesheet";
     }
@@ -60,13 +61,13 @@ public class DataSource {
     public void remove() {
         String sql = "DELETE FROM timesheet WHERE ....";
     }
-
+    */
     /*
      * Login function
      */
     public boolean login(String usern, String pwd) {
         boolean correct = false;
-        String sql = "Select username, password from user";
+        String sql = "SELECT username, password FROM user";
         try (Connection conn = DriverManager.getConnection(dbURL, username, password)){
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery(sql);

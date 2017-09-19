@@ -1,7 +1,6 @@
 package controller;
 
 import data.DataSource;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +19,7 @@ public class LoginController {
     @FXML private PasswordField password;
 
     @FXML
-    protected void handleSubmitButtonAction(ActionEvent event) throws IOException {
+    protected void handleSubmitButtonAction() throws IOException {
         String userN = username.getText();
         String passW = password.getText();
         DataSource dS = new DataSource();

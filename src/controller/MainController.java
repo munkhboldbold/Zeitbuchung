@@ -12,12 +12,10 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Timesheet;
-import javafx.event.ActionEvent;
 
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -68,7 +66,7 @@ public class MainController implements Initializable {
     @FXML
     protected void handleSaveBtnAction() {
         String emName = empName.getText();
-        LocalDate datum = datepicker.getValue();;
+        LocalDate datum = datepicker.getValue();
         String coName = contractName.getText();
         String cuName = customerName.getText();
         String assign = assignment.getText();
@@ -84,30 +82,27 @@ public class MainController implements Initializable {
 
 
         if (datum != null) {
-            actionTargetBtn.setText("Saving ... \n" +
-            emName + "\n" + datum + "\n" + coName + "\n" + cuName + "\n" +
-            assign + "\n" + bClass + "\n" + jType + "\n" + dtn + "\n" +
-                    selectedRadio.getText() + "\n" + ext + "\n" + cmt);
+            actionTargetBtn.setText("Saving ...");
+            Timesheet tst = new Timesheet(
+                    emName,
+                    datum.toString(),
+                    null,
+                    coName,
+                    cuName,
+                    assign,
+                    bClass,
+                    jType,
+                    dtn,
+                    selectedRadio.getText(),
+                    ext,
+                    cmt
+            );
+            DataSource ds = new DataSource();
+            ds.createTimesheet(tst);
+            actionTargetBtn.setText("Complete!");
         } else {
             actionTargetBtn.setText("Bitte wählen Sie einen Datum aus!");
         }
-
-        Timesheet tst = new Timesheet(
-                emName,
-                datum.toString(),
-                null,
-                coName,
-                cuName,
-                assign,
-                bClass,
-                jType,
-                dtn,
-                selectedRadio.getText(),
-                ext,
-                cmt
-        );
-        DataSource ds = new DataSource();
-        ds.createTimesheet(tst);
     }
 
     /*
@@ -116,7 +111,7 @@ public class MainController implements Initializable {
     @FXML
     private Button projectBtn;
     @FXML
-    protected void handleProjectBtnAction(ActionEvent event) throws IOException {
+    protected void handleProjectBtnAction() throws IOException {
         Stage stage = (Stage)projectBtn.getScene().getWindow();
         Parent root;
         root = FXMLLoader.load(getClass().getResource("../view/projectView.fxml"));
@@ -131,7 +126,7 @@ public class MainController implements Initializable {
     @FXML
     private Button helpBtn;
     @FXML
-    protected void handleHelpBtnAction(ActionEvent event) throws IOException {
+    protected void handleHelpBtnAction() throws IOException {
         Stage stage = (Stage)helpBtn.getScene().getWindow();
         Parent root;
         root = FXMLLoader.load(getClass().getResource("../view/help.fxml"));
@@ -147,7 +142,7 @@ public class MainController implements Initializable {
     private Button cancelBtn;
 
     @FXML
-    protected void handleCancelBtnAction (ActionEvent event) throws IOException {
+    protected void handleCancelBtnAction () throws IOException {
         Stage stage = (Stage)cancelBtn.getScene().getWindow();
         Parent root;
         root = FXMLLoader.load(getClass().getResource("../view/login.fxml"));
