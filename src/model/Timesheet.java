@@ -1,45 +1,37 @@
 package model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Timesheet {
     private String name;
-    private Date datum;
+    private String datum;
     private String projectName;
     private String contractName;
     private String customerName;
-    private String order;
-    private List<String> activityClass;
-    private List<String> activity;
-    private double duration;
-    private boolean toGetInBill;
-    private boolean moreCost;
+    private String assignment;
+    private String businessClass;
+    private String jobType;
+    private String duration;
+    private String calculation;
+    private String extra;
     private String comments;
 
-    public Timesheet(String name,
-                     Date datum,
-                     String projectName,
-                     String contractName,
-                     String customerName,
-                     String order,
-                     List<String> activityClass,
-                     List<String> activity,
-                     double duration,
-                     boolean toGetInBill,
-                     boolean moreCost,
-                     String comments) {
+    public Timesheet(String name, String datum, String projectName,
+                     String contractName, String customerName,
+                     String assignment, String businessClass,
+                     String jobType, String duration, String calculation,
+                     String extra, String comments) {
         this.name = name;
         this.datum = datum;
         this.projectName = projectName;
         this.contractName = contractName;
         this.customerName = customerName;
-        this.order = order;
-        this.activityClass = activityClass;
-        this.activity = activity;
+        this.assignment = assignment;
+        this.businessClass = businessClass;
+        this.jobType = jobType;
         this.duration = duration;
-        this.toGetInBill = toGetInBill;
-        this.moreCost = moreCost;
+        this.calculation = calculation;
+        this.extra = extra;
         this.comments = comments;
     }
 
@@ -47,92 +39,92 @@ public class Timesheet {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getDatum() {
+    public String getDatum() {
         return datum;
-    }
-
-    public void setDatum(Date datum) {
-        this.datum = datum;
     }
 
     public String getProjectName() {
         return projectName;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
-    }
-
     public String getContractName() {
         return contractName;
-    }
-
-    public void setContractName(String contractName) {
-        this.contractName = contractName;
     }
 
     public String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public String getAssignment() {
+        return assignment;
     }
 
-    public String getOrder() {
-        return order;
+    public String getBusinessClass() {
+        return businessClass;
     }
 
-    public void setOrder(String order) {
-        this.order = order;
+    public String getJobType() {
+        return jobType;
     }
 
-    public List<String> getActivityClass() {
-        return activityClass;
-    }
-
-    public void setActivityClass(List<String> activityClass) {
-        this.activityClass = activityClass;
-    }
-
-    public List<String> getActivity() {
-        return activity;
-    }
-
-    public void setActivity(List<String> activity) {
-        this.activity = activity;
-    }
-
-    public double getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(double duration) {
-        this.duration = duration;
+    public String isCalculation() {
+        return calculation;
     }
 
-    public boolean isToGetInBill() {
-        return toGetInBill;
-    }
-
-    public void setToGetInBill(boolean toGetInBill) {
-        this.toGetInBill = toGetInBill;
-    }
-
-    public boolean isMoreCost() {
-        return moreCost;
-    }
-
-    public void setMoreCost(boolean moreCost) {
-        this.moreCost = moreCost;
+    public String isExtra() {
+        return extra;
     }
 
     public String getComments() {
         return comments;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDatum(String datum) {
+        this.datum = datum;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public void setContractName(String contractName) {
+        this.contractName = contractName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setAssignment(String assignment) {
+        this.assignment = assignment;
+    }
+
+    public void setBusinessClass(String businessClass) {
+        this.businessClass = businessClass;
+    }
+
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public void setCalculation(String calculation) {
+        this.calculation = calculation;
+    }
+
+    public void setExtra(String extra) {
+        this.extra = extra;
     }
 
     public void setComments(String comments) {

@@ -26,7 +26,7 @@
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2" GridPane.rowIndex="2" />
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="2" />
   <!-- 4. Row-->
-  <Button alignment="BOTTOM_LEFT" text="Projektauswahl" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+  <Button fx:id="selectPBtn" alignment="BOTTOM_LEFT" text="Projektauswahl" GridPane.columnIndex="0" GridPane.rowIndex="3" />
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
   <Label text="Vertrag" GridPane.columnIndex="2" GridPane.rowIndex="3" />
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="3" />
@@ -37,17 +37,17 @@
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="4" />
   <!-- 6. Row-->
   <Label text="Tätigkeitsklasse" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-  <ComboBox fx:id="order" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+  <ComboBox fx:id="businessClass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
   <Label text="Tätigkeit" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-  <ComboBox fx:id="activity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-1.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+  <ComboBox fx:id="jobType" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-1.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
   <!-- 7. Row-->
   <Label text="verwendete Zeit" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-  <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+  <TextField fx:id="duration" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
   <Label text="in Abrechnung aufnehmen" GridPane.columnIndex="2" GridPane.rowIndex="6" />
   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="6" />
   <!-- 8. Row-->
   <Label text="Bemerkung" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.rowSpan="1" />
-  <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="1" />
+  <TextField fx:id="comments" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="1" />
   <!-- 9. Row-->
   <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="8">
     <Button onAction="#handleSaveBtnAction" text="Abschließen" />
@@ -70,7 +70,7 @@
           <RadioButton mnemonicParsing="false" text="nein" toggleGroup="$group" />
         </children>
       </HBox>
-      <CheckBox fx:id="moreCost" alignment="CENTER" contentDisplay="LEFT" depthTest="INHERIT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="145.0" text="Mehraufwand" textAlignment="LEFT" />
+      <CheckBox fx:id="extra" alignment="CENTER" contentDisplay="LEFT" depthTest="INHERIT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="145.0" text="Mehraufwand" textAlignment="LEFT" />
     </children>
   </VBox>
   <TextField fx:id="empName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -82,5 +82,5 @@
     <URL value="@../style/main.css" />
   </stylesheets>
   <TextField fx:id="customerName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-  <TextField fx:id="orderName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+  <TextField fx:id="assignment" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 </GridPane>
