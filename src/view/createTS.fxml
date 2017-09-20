@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<AnchorPane id="anchorPane" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateTSController">
+   <children>
+      <VBox minHeight="600.0" minWidth="890.0" prefHeight="600.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar styleClass="mainmenu">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+            <ToolBar prefHeight="45.0" prefWidth="800.0">
+              <items>
+                <Button mnemonicParsing="false" text="." />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="." />
+                  <Button layoutX="39.0" layoutY="10.0" mnemonicParsing="false" text="." />
+                  <Button layoutX="68.0" layoutY="10.0" mnemonicParsing="false" text="." />
+                  <Button layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="." />
+              </items>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToolBar>
+            <SplitPane dividerPositions="0.29797979797979796, 0.5" minHeight="100.0" minWidth="890.0" prefHeight="100.0" prefWidth="890.0">
+              <items>
+                <AnchorPane minHeight="100.0" minWidth="280.0" prefHeight="100.0" prefWidth="296.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Projektauswahl">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ListView minHeight="80.0" minWidth="199.0" prefHeight="80.0" prefWidth="199.0" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="100.0" minWidth="300.0" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="300.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ListView prefHeight="100.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+                  <AnchorPane minHeight="100.0" minWidth="300.0" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="300.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ListView prefHeight="100.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+   <!-- Styling -->
+   <stylesheets>
+       <URL value="@../style/stylets.css" />
+   </stylesheets>
+</AnchorPane>

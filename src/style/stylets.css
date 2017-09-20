@@ -1,0 +1,10 @@
+#anchorPane {
+
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+}
+
+.mainmenu {
+    -fx-fit-to-width: true;
+}
+
